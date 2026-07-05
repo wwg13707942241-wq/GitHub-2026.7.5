@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIGC作品集 | Gavin Portfolio</title>
+    <meta
+      name="description"
+      content="Gavin 的 AIGC 作品集，展示亚马逊电商图、品牌设计全案、AI 视频商业广告与视觉设计能力。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site-data.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="is-loading">
+    <div class="opening-sequence" aria-hidden="true">
+      <div class="opening-word">AIGC PORTFOLIO</div>
+      <div class="opening-scan"></div>
+      <div class="opening-meta">GAVIN / VISUAL DESIGN / AI COMMERCIAL FILM</div>
+    </div>
+    <canvas id="particlesCanvas" class="particles-bg" aria-hidden="true"></canvas>
+
+    <header class="site-header" aria-label="主导航">
+      <a class="brand-mark" href="#home" aria-label="返回首页">
+        <span class="mark-dot"></span>
+        <span>GAVIN</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#home">主页</a>
+        <a href="#experience">工作经历</a>
+        <a href="#strengths">个人优势</a>
+        <a href="#amazon">亚马逊电商图</a>
+        <a href="#brand">品牌设计全案</a>
+        <a href="#video">AIGC视频</a>
+        <a href="#contact">联系方式</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="panel hero is-visible" data-theme="hero">
+        <video class="hero-video" muted autoplay playsinline loop preload="metadata"></video>
+        <div class="hero-shade"></div>
+        <div class="hero-grid"></div>
+        <figure class="hero-portrait avatar-art magnet" aria-label="3D creator avatar">
+          <span class="avatar-aura"></span>
+          <img src="./assets/hero-avatar-reference.png" alt="3D creator avatar" />
+        </figure>
+        <div class="hero-copy">
+          <p class="eyebrow">Amazon Visual · Brand System · AI Commercial Film</p>
+          <h1 class="hero-title" aria-label="Hi, I'm Gavin">
+            <span>Hi, I'm</span><span>Gavin</span>
+          </h1>
+          <div class="hero-bottom">
+            <div>
+              <p class="hero-role">AIGC作品集 / 视觉设计师 / AI 视觉设计师 / 品牌设计师</p>
+              <p class="hero-summary">
+                我是设计师 Gavin，这是我面向跨境电商、品牌商业化与 AIGC 视频内容的视觉作品集。覆盖产品主图、A+ 页面、品牌全案、AI 商业广告与动态分镜。
+              </p>
+            </div>
+            <div class="hero-actions" aria-label="主要入口">
+              <a class="primary-link magnet" href="#amazon">进入作品目录</a>
+              <a class="ghost-link magnet" href="#experience">查看经历</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel marquee-section" aria-label="作品动态预览">
+        <div class="marquee-heading">
+          <p class="eyebrow">Selected Visual Reel</p>
+          <h2>作品视觉流</h2>
+        </div>
+        <div class="marquee-viewport">
+          <div class="marquee-row marquee-row-one"></div>
+          <div class="marquee-row marquee-row-two"></div>
+        </div>
+      </section>
+
+      <section id="experience" class="panel experience-section">
+        <div class="section-shell experience-layout experience-shell">
+          <aside class="experience-profile" aria-label="个人信息">
+            <figure class="portrait-frame">
+              <img id="profilePhoto" alt="Gavin 个人照片" loading="lazy" />
+            </figure>
+            <div class="profile-info-panel">
+              <p class="eyebrow">Designer Profile</p>
+              <h2>汪文根 / Gavin</h2>
+              <p>视觉传达设计专业背景，专注亚马逊电商视觉、AI 视觉生产和品牌内容设计。</p>
+              <div class="social-list"></div>
+            </div>
+          </aside>
+
+          <div class="experience-content">
+            <div class="section-heading compact-heading">
+              <p class="eyebrow">Experience</p>
+              <h2>工作经历</h2>
+            </div>
+            <div class="timeline" aria-label="工作经历时间轴"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="strengths" class="panel strengths-section">
+        <div class="section-shell strengths-shell">
+          <div class="section-heading compact-heading">
+            <p class="eyebrow">Evaluation</p>
+            <h2>个人评价和个人优势</h2>
+          </div>
+          <div class="strength-grid" aria-label="个人评价和优势"></div>
+        </div>
+      </section>
+
+      <section id="amazon" class="panel amazon-section work-section">
+        <div class="section-shell catalog-shell amazon-shell">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Amazon Visual Catalog</p>
+              <h2>亚马逊电商图目录</h2>
+            </div>
+            <p>点击类目后进入对应作品，不在首页直接铺满图片，便于按项目浏览。</p>
+          </div>
+          <div class="catalog-grid amazon-catalog" aria-label="亚马逊电商图目录"></div>
+          <div class="work-reveal" id="amazonWorks" aria-live="polite">
+            <div class="reveal-empty">选择一个类目查看该类目的作品。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="brand" class="panel brand-section work-section">
+        <div class="section-shell catalog-shell brand-shell">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Brand System Catalog</p>
+              <h2>品牌设计全案目录</h2>
+            </div>
+            <p>点击品牌项目进入完整视觉资产，查看品牌识别、产品场景和延展物料。</p>
+          </div>
+          <div class="catalog-grid brand-catalog" aria-label="品牌设计全案目录"></div>
+          <div class="work-reveal" id="brandWorks" aria-live="polite">
+            <div class="reveal-empty">选择一个品牌全案查看作品。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="video" class="panel video-section work-section">
+        <div class="section-shell catalog-shell video-shell">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">AIGC Video Catalog</p>
+              <h2>AIGC 视频作品目录</h2>
+            </div>
+            <p>点击视频类型后展示对应作品，覆盖商业广告、AI 微电影和动态分镜练习。</p>
+          </div>
+          <div class="catalog-grid video-catalog" aria-label="AIGC 视频作品目录"></div>
+          <div class="work-reveal" id="videoWorks" aria-live="polite">
+            <div class="reveal-empty">选择一个视频类型查看作品。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="panel contact-section">
+        <div class="section-shell contact-layout contact-shell">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>联系方式</h2>
+            <p>面向电商视觉、AI 视频商业广告、品牌视觉全案和 AIGC 工作流项目合作。</p>
+            <div class="contact-actions">
+              <a id="resumeDownload" class="primary-link" href="#" target="_blank" rel="noreferrer">查看完整简历</a>
+              <a class="ghost-link" href="mailto:2734915567@qq.com">邮箱联系</a>
+            </div>
+          </div>
+          <div class="contact-panel" aria-label="联系方式"></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="lightbox" aria-label="作品预览">
+      <button class="lightbox-close" type="button" aria-label="关闭预览">×</button>
+      <div class="lightbox-body"></div>
+      <p class="lightbox-caption"></p>
+    </dialog>
+  </body>
+</html>
